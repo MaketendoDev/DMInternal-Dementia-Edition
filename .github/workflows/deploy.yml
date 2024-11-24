@@ -30,7 +30,7 @@ jobs:
       - name: Upload HTML Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './index.html'
+          path: '${{ github.workspace }}/index.html'
 
   deploy:
     environment:
