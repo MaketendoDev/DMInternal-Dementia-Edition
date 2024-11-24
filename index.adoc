@@ -1,7 +1,7 @@
+:toc:left
 = Dalek Mod 1.21.3 Internal Wiki
 Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+
 :source-highlighter: coderay
-:toc:left
 
 == TARDIS
 === Builder
