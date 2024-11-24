@@ -23,7 +23,7 @@ jobs:
       - name: Install Asciidoctor
         run: sudo apt-get install -y asciidoctor
       - name: Convert AsciiDoc to HTML
-        run: asciidoctor index.adoc
+        run: asciidoctor -a stylesheet=dark.css index.adoc
       - name: DO YOU EXIST??
         run: ls -l index.html 
       - name: Upload HTML Artifact
