@@ -23,7 +23,7 @@ jobs:
       - name: Install Asciidoctor
         run: sudo apt-get install -y asciidoctor
       - name: Convert AsciiDoc to HTML
-        run: asciidoctor -o index.html index.adoc
+        run: asciidoctor index.adoc
       - name: Upload HTML Artifact
         uses: actions/upload-pages-artifact@v3
         with:
