@@ -1,6 +1,6 @@
 = Dalek Mod 1.21.3 Internal Wiki
 Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+
-:source-highlighter: rouge
+:source-highlighter: coderay
 == TARDIS
 === Builder
 Dalek Mod 1.21.3 will use "_TARDIS Builders_", which handle how the TARDIS should be placed and destroyed in the world.
