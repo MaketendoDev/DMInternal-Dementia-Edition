@@ -1,0 +1,101 @@
+= Dalek Mod 1.21.3 Internal Wiki
+Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+
+
+== TARDIS
+=== Builder
+Dalek Mod 1.21.3 will use "_TARDIS Builders_", which handle how the TARDIS should be placed and destroyed in the world.
+For example, during demat the TARDIS Builder will remove the TARDIS Blocks and during remat it will place the blocks again with the required data.
+
+TARDIS Builders are not *Datapack* driven but done via *Java Code*. + 
+
+As of now Dalek Mod has 2 TARDIS Builder: + 
+- *DefaultTardisBuilder* (Places 3 Blocks: TARDIS, TARDIS_TOP, LIGHT) +
+- *NoLightTardisBuilder* (Places 2 Blocks: TARDIS, TARDIS_TOP; Useful if your exterior does not have a lantern)
+
+To create a custom TardisBuilder you need a class that extends *TardisBuilder*
+[source,java]
+----
+public class MyTardisBuilder extends TardisBuilder {}
+----
+*TardisBuilder* is an *abstract* class that has the following functions declared: +
+- *rematAction* +
+- *dematAction* +
+- *finishReMatAction* +
+- *finishDeMatAction* +
+- *setBlock* +
+- *createTardis* +
+- *buildTardis* +
+- *destroyTardis* +
+- *constructTardis* +
+
+*rematAction* and *dematAction* get called during remat/demat, their *finish actions* get called once the animation is done. *setBlock* is a helper function that places a block in the world and updates it. *createTardis* is already defined, it calls *constructTardis* and then creates a new *TardisData* and its regarding *TardisId*. *buildTardis* is also already defined and will rebuild the TARDIS in the World with the existing TardisData. *destroyTardis* and *constructTardis* will place or destroy the TARDIS related blocks in the world but not do anything with data.
+In further, you can check our custom TARDIS Builders how they work code-wise, it is not rocket science and a simple system.
+
+TARDIS Builders can be registered using a custom Fabric Registry
+[source,java]
+----
+Registry.register(DMRegistry.TARDIS_BUILDERS, ¬ID¬, ¬builder¬);
+----
+
+=== Exterior
+Exteriors are done using *Datapacks* and *Resourcepacks*. +
+
+==== Datapack Side - Server
+Datapacks are only for the server, so this does not require much data to work with. +
+The Server only needs to know which TARDIS Exteriors exist, so the jsons will only be an array of data. +
+The jsons for exteriors are located inside *data/your_namespace/tardis/exterior/* and will look like this: +
+[source,json]
+----
+[
+  {
+    "id": "dalekmod:test",
+    "builder": "dalekmod:default"
+  },
+  {
+    "id": "dalekmod:corrupted",
+    "builder": "dalekmod:default"
+  }
+]
+----
+ID and Builder is technically self-explanitory, but *id* will be the exteriors id and *builder* will be the builder it uses. +
+You can have multiple jsons as you like with different data, if you want to organize your exteriors a bit - it does not matter since all jsons inside this folder will be loaded if valid. +
+
+==== Resourcepack Side - Client
+Now the Client needs to know which Models and Textures it needs to render - thats where Resourcepacks come into play. +
+It can be internally in the mod or an extern resourcepack. +
+The jsons for exteriors are like for Datapacks located inside *assets/your_namespace/tardis/exterior/* +
+[source,json]
+----
+{
+  "id": "dalekmod:test",
+  "name": "Test",
+  "description": "Test",
+  "model": "dalekmod:geo/block_entity/tardis_exterior/canon/1963_police_box/1963_police_box.geo.json",
+  "animation": "",
+  "texture": "dalekmod:textures/block_entity/tardis_exterior/canon/1963_police_box/1963_police_box.png",
+  "layers": {
+    "snow_map": "dalekmod:textures/block/1963_police_box_snowmap.png",
+    "light_map": "dalekmod:textures/block_entity/tardis_exterior/canon/1963_police_box/1963_police_box_lightmap.png"
+  }
+}
+----
+This is an example exterior json. +
+Every json entry is self-explanitory again, but I will talk a bit more about the *layers*: +
+Layers are what the *snowmaps* used to be in Dalek Mod 1.16.5 and you can add it using the Layers ID and then a path to the texture. +
+Dalek Mod 1.21.3+ has these default Render Layers: +
+- *snow_map* +
+- *light_map* +
+- *cherry_map* +
+- *sculk_map* +
+- *ash_map* +
+
+Custom Layers can be added in *code* by using the *TardisRenderLayerCallback* event which invokes inside the TardisRenderer constructor. +
+Something which is TODO is a System that allows to override the layer array from existing exteriors. +
+Reason for that is, if you have 2 addons that add new layers and both want to add them to default exteriors, one will override the other one. +
+You can do it via code by getting the *ClientTardisExterior* class from the *TardisExterior Registry* using its ID and add the layer, but I will also add an option to do it via resourcepacks.
+
+==== Server-Client mismatch
+When a Player joins, the Server will send all of its Exteriors to the Client, if the Client is missing an Exterior, it will render the "_Corrupted TARDIS Exterior_". +
+If you don't know how to make a mod and result to a Server Datapack and Resourcepack, the Clients will _need_ your Resourcepack in order to Render the TARDIS Exterior, otherwise its an ID Mismatch.
+
+== Sonics
