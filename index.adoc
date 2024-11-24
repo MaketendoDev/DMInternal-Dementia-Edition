@@ -1,5 +1,6 @@
 = Dalek Mod 1.21.3 Internal Wiki
-Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+
+Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+ +
+https://jaysonjson.github.io/DMInternal/dark[Dark Mode]
 :source-highlighter: coderay
 
 == TARDIS
