@@ -1,9 +1,10 @@
-name: Deployyy
+name: AAAAAAAAAAAAA
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
@@ -23,6 +24,11 @@ jobs:
         run: sudo apt-get install -y asciidoctor
       - name: Convert AsciiDoc to HTML
         run: asciidoctor -o index.html index.adoc
+      - name: Upload HTML Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: index.html
+
   deploy:
     environment:
       name: github-pages
@@ -32,13 +38,6 @@ jobs:
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Check
-        run: ls
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
