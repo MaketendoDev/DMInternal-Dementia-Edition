@@ -26,11 +26,10 @@ jobs:
         run: asciidoctor index.adoc
       - name: DO YOU EXIST??
         run: ls -l index.html 
-
       - name: Upload HTML Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '${{ github.workspace }}/index.html'
+          path: '.'
 
   deploy:
     environment:
