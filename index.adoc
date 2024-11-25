@@ -7,7 +7,7 @@ Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.2
 Dalek Mod 1.21.3 will use "_TARDIS Builders_", which handle how the TARDIS should be placed and destroyed in the world.
 For example, during demat the TARDIS Builder will remove the TARDIS Blocks and during remat it will place the blocks again with the required data.
 
-TARDIS Builders are not *Datapack* driven but done via *Java Code*. + 
+TARDIS Builders are not *Datapack* driven but done via *Java Code*. +
 
 As of now Dalek Mod has 2 TARDIS Builder: + 
 - *DefaultTardisBuilder* (Places 3 Blocks: TARDIS, TARDIS_TOP, LIGHT) +
@@ -103,15 +103,18 @@ If you don't know how to make a mod and result to a Server Datapack and Resource
 
 == Styling
 === General style rules
-Almost all assets should follow the Jappa artstyle and consequently the Minecraft style as a whole (Exceptions covered later). An overview of what that entails can be found at https://www.blockbench.net/wiki/guides/minecraft-style-guide/.
+Almost all assets should follow the Jappa art style and the Minecraft style as a whole (Exceptions covered later).
+An overview of what that entails can be found at https://www.blockbench.net/wiki/guides/minecraft-style-guide/.
 
-=== Consitency
-Everything added in the mod should be consistent with everything else in the mod. When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla minecraft if there are none in the mod. If there is nothing similar in either the mod or the base game, then and *only* then can the asset be created completely from scratch (still ensuring to remain within the general confines set by other assets). +
-If making a new asset which is in a new artstyle, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style.
+=== Consistency
+Everything added in the mod should be consistent with everything else in the mod.
+When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla minecraft if there are none in the mod.
+If there is nothing similar in either the mod or the base game, then and *only* then can the asset be created completely from scratch (still ensuring to remain within the general confines set by other assets). +
+If making a new asset which is in a new art style, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style.
 
 === Exceptions
 These style rules can be broken for only a select few reasons. +
-- If an asset is intended to emulate a different asset from outside of the mod (if the source is already pixel-art based), this *may* use the source artstyle for its model, texture, or both. +
-- If the source an asset is trying to emulate has an extremely *important* recognisable feature which cannot be replicated within the artstyle, some rules may be bent slightly to allow for this feature to be present.
+- If an asset is intended to emulate a different asset from outside of the mod (if the source is already pixel-art based), this *may* use the source art style for its model, texture, or both. +
+- If the source an asset is trying to emulate has an extremely *important* recognisable feature which cannot be replicated within the art style, some rules may be bent slightly to allow for this feature to be present. +
 
-Note: in cases where stretching the artstyle introduces a new way of representing features on previous assets, said previous assets should be updated to match the new style.
+Note: in cases where stretching the art style introduces a new way of representing features on previous assets, said previous assets should be updated to match the new style.
