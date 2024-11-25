@@ -108,7 +108,7 @@ An overview of what that entails can be found at https://www.blockbench.net/wiki
 
 === Consistency
 Everything added in the mod should be consistent with everything else in the mod.
-When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla minecraft if there are none in the mod.
+When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla Minecraft *if there are none in the mod*.
 If there is nothing similar in either the mod or the base game, then and *only* then can the asset be created completely from scratch (still ensuring to remain within the general confines set by other assets). +
 
 If making a new asset which is in a new art style, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style. +
