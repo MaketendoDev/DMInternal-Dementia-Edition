@@ -122,8 +122,8 @@ Note: in cases where stretching the art style introduces a new way of representi
 
 == Sound
 === General sound rules
-All sounds should be mastered such that its volume is relative to other existing sounds of the same type.
-This includes both in game sound effects and all music. +
+Every sound should be mastered such that its volume is relative to other existing sounds of the same type.
+This includes both in-game sound effects and all music. +
 All sound files should be stored in the .ogg format. +
 
 === Music
