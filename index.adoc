@@ -132,8 +132,8 @@ One is title screen music, the other is ambient, in-game music. +
 
 ==== Title screen tracks
 
-Title screen track have fewer rules.
-These will usaully be arrangements of the Doctor Who theme, but other special themes (perhaps the themes from various Doctor Who spin-offs) may be included as well.
+Title screen tracks have fewer rules.
+These will usaully be arrangements of the Doctor Who theme, but other themes (perhaps themes from various Doctor Who spin-offs) may be included as well.
 These will usually be *upbeat* (especially compared to the ambient tracks) and are free in their intrumentation. +
 
 ==== Ambient tracks
