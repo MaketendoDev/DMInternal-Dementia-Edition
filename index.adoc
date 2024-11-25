@@ -9,7 +9,7 @@ For example, during demat the TARDIS Builder will remove the TARDIS Blocks and d
 
 TARDIS Builders are not *Datapack* driven but done via *Java Code*. +
 
-As of now Dalek Mod has 2 TARDIS Builder: + 
+As of now Dalek Mod has 2 TARDIS Builder: +
 - *DefaultTardisBuilder* (Places 3 Blocks: TARDIS, TARDIS_TOP, LIGHT) +
 - *NoLightTardisBuilder* (Places 2 Blocks: TARDIS, TARDIS_TOP; Useful if your exterior does not have a lantern)
 
@@ -104,13 +104,14 @@ If you don't know how to make a mod and result to a Server Datapack and Resource
 == Styling
 === General style rules
 Almost all assets should follow the Jappa art style and the Minecraft style as a whole (Exceptions covered later).
-An overview of what that entails can be found at https://www.blockbench.net/wiki/guides/minecraft-style-guide/.
+An overview of what that entails can be found at https://www.blockbench.net/wiki/guides/minecraft-style-guide/. +
 
 === Consistency
 Everything added in the mod should be consistent with everything else in the mod.
 When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla minecraft if there are none in the mod.
 If there is nothing similar in either the mod or the base game, then and *only* then can the asset be created completely from scratch (still ensuring to remain within the general confines set by other assets). +
-If making a new asset which is in a new art style, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style.
+
+If making a new asset which is in a new art style, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style. +
 
 === Exceptions
 These style rules can be broken for only a select few reasons. +
