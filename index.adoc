@@ -102,27 +102,26 @@ If you don't know how to make a mod and result to a Server Datapack and Resource
 == Sonics
 
 == Styling
-=== Assets
-==== General style rules
+=== General style rules
 Almost all assets should follow the Jappa art style and the Minecraft style as a whole (Exceptions covered later).
 An overview of what that entails can be found at https://www.blockbench.net/wiki/guides/minecraft-style-guide/. +
 
-==== Consistency
+=== Consistency
 Everything added in the mod should be consistent with everything else in the mod.
 When making an asset, try to base the asset on similar existing assets in the mod, or in vanilla Minecraft *if there are none in the mod*.
 If there is nothing similar in either the mod or the base game, then and *only* then can the asset be created completely from scratch (still ensuring to remain within the general confines set by other assets). +
 
 If making a new asset which is in a new art style, either the added asset should be adapted to better fit the style, or *all* previous assets should be updated to the new style. +
 
-==== Exceptions
+=== Exceptions
 These style rules can be broken for only a select few reasons. +
 - If an asset is intended to emulate a different asset from outside of the mod (if the source is already pixel-art based), this *may* use the source art style for its model, texture, or both. +
 - If the source an asset is trying to emulate has an extremely *important* recognisable feature which cannot be replicated within the art style, some rules may be bent slightly to allow for this feature to be present. +
 
 Note: in cases where stretching the art style introduces a new way of representing features on previous assets, said previous assets should be updated to match the new style. +
 
-=== Sound
-==== General sound rules
+== Sound
+=== General sound rules
 All sounds should be mastered such that its volume is relative to other existing sounds of the same type.
 This includes both in game sound effects and all music. +
 All sound files should be stored in the .ogg format. +
@@ -131,13 +130,13 @@ All sound files should be stored in the .ogg format. +
 There are two types of music used in the mod.
 One is title screen music, the other is ambient, in-game music. +
 
-===== Title screen tracks
+==== Title screen tracks
 
 Title screen track have fewer rules.
 These will usaully be arrangements of the Doctor Who theme, but other special themes (perhaps the themes from various Doctor Who spin-offs) may be included as well.
-These will usually be *upbeat* (especially compared to the ambient tracks) and are free in their intrumentaiton. +
+These will usually be *upbeat* (especially compared to the ambient tracks) and are free in their intrumentation. +
 
-===== Ambient tracks
+==== Ambient tracks
 
 Ambient tracks should be mostly consistent in both *feel* (to use a rather vague term) and *intrumentation* relative to other ambient tracks from the same dimension.
 Having said that, each track should be distinct enough from one another that it is possible to recognise which one is which when playing in game. +
