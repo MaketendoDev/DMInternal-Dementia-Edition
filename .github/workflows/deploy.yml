@@ -26,7 +26,7 @@ jobs:
         run: sudo apt-get install -y ruby-coderay
       - name: Create Default
         #run: asciidoctor -a stylesheet=default.css index.adoc
-        run: asciidoctor -a index.adoc
+        run: asciidoctor index.adoc
       - name: Create Dark
         run: asciidoctor -a stylesheet=dark.css -o dark.html index.adoc
       - name: DO YOU EXIST??
