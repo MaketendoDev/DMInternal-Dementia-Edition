@@ -2,8 +2,15 @@
 Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3+
 :source-highlighter: coderay
 
+== Addons
+Addons for Dalek Mod are allowed, but we would like that any Addon follows these Guidelines and also these special cases: + 
+- Your Addon should not use the **dalekmod** modid when registerting stuff +
+- If your addon is both client and server (**common**) please disable the DMU Button in the Titlescreen +
+
 == TARDIS
-=== Builder
+.**Builder**
+[%collapsible]
+====
 Dalek Mod 1.21.3 will use "_TARDIS Builders_", which handle how the TARDIS should be placed and destroyed in the world.
 For example, during demat the TARDIS Builder will remove the TARDIS Blocks and during remat it will place the blocks again with the required data.
 
@@ -37,11 +44,15 @@ TARDIS Builders can be registered using a custom Fabric Registry
 ----
 Registry.register(DMRegistry.TARDIS_BUILDERS, ¬ID¬, ¬builder¬);
 ----
-
-=== Exterior
+====
+.**Exterior**
+[%collapsible]
+====
 Exteriors are done using *Datapacks* and *Resourcepacks*. +
 
-==== Datapack Side - Server
+.Datapack Side - Server
+[%collapsible]
+=====
 Datapacks are only for the server, so this does not require much data to work with. +
 The Server only needs to know which TARDIS Exteriors exist, so the jsons will only be an array of data. +
 The jsons for exteriors are located inside *data/your_namespace/tardis/exterior/* and will look like this: +
@@ -60,8 +71,10 @@ The jsons for exteriors are located inside *data/your_namespace/tardis/exterior/
 ----
 ID and Builder is technically self-explanitory, but *id* will be the exteriors id and *builder* will be the builder it uses. +
 You can have multiple jsons as you like with different data, if you want to organize your exteriors a bit - it does not matter since all jsons inside this folder will be loaded if valid. +
-
-==== Resourcepack Side - Client
+=====
+.Resourcepack Side - Client
+[%collapsible]
+=====
 Now the Client needs to know which Models and Textures it needs to render - thats where Resourcepacks come into play. +
 It can be internally in the mod or an extern resourcepack. +
 The jsons for exteriors are like for Datapacks located inside *assets/your_namespace/tardis/exterior/* +
@@ -94,11 +107,14 @@ Custom Layers can be added in *code* by using the *TardisRenderLayerCallback* ev
 Something which is TODO is a System that allows to override the layer array from existing exteriors. +
 Reason for that is, if you have 2 addons that add new layers and both want to add them to default exteriors, one will override the other one. +
 You can do it via code by getting the *ClientTardisExterior* class from the *TardisExterior Registry* using its ID and add the layer, but I will also add an option to do it via resourcepacks.
-
-==== Server-Client mismatch
+=====
+.Server-Client mismatch
+[%collapsible]
+=====
 When a Player joins, the Server will send all of its Exteriors to the Client, if the Client is missing an Exterior, it will render the "_Corrupted TARDIS Exterior_". +
 If you don't know how to make a mod and result to a Server Datapack and Resourcepack, the Clients will _need_ your Resourcepack in order to Render the TARDIS Exterior, otherwise its an ID Mismatch.
-
+=====
+====
 == Sonics
 
 == Styling
