@@ -5,7 +5,7 @@ Code Sections managed by Jayson; Style by Ginger
 
 == Addons
 Addons for Dalek Mod are allowed, but we would like that any Addon follows these Guidelines and also these special cases: + 
-- Your Addon should not use the **dalekmod** modid when registerting stuff +
+- Your Addon should not use the **dalekmod** modid when registering stuff +
 - If your addon is both client and server (**common**) please disable the DMU Button in the Titlescreen +
 DM Assets and Data can be extracted from the .jar file or downloaded from here: https://jaysonjson.github.io/DMInternal/assets.zip
 
@@ -160,3 +160,29 @@ Ambient tracks should be mostly consistent in both *feel* (to use a rather vague
 Having said that, each track should be distinct enough from one another that it is possible to recognise which one is which when playing in game. +
 These are, as the name implies, *ambient*, and should not distract the player from what they're doing, but rather enhance it.
 The vanilla tracks create a sense of importance to moments that would otherwise be dull, making said moments more memorable; we should be striving to achieve the same affect.
+
+
+== Structures
+.**TARDIS Interior**
+[%collapsible]
+====
+When designing a TARDIS interior to use in an addon, you should respect the limitations put in place. All interiors in the mod fit within a 64x64 area, equivalent to 4x4 chunks. +
+
+image::TARDIS Building Area.png[alt="X Axis: Red | Z Axis: Blue"]
+Red is the X Axis, while Blue denote the Z Axis. Each square is a chunk. +
+
+If designing a canon interior (one that has been in the show), you should aim to keep the styling consistent with the other canon interiors already in the mod. +
+
+If designing a custom interior, then you have free rein. It can be as expensive as you want, but it has to be obtainable in survival. This means no player heads or bedrock-equivalent blocks. +
+====
+.**Generated Structures**
+[%collapsible]
+====
+When designing a structure to spawn in dimensions, try and keep it within a chunk. There will be some exceptions, such as boss arenas or dungeons. +
+
+Simple structures, such as Thal houses (from 1.16), should aim to utilise the block palette of the area it will be generating in. +
+
+Larger structures may utilise a wider variety, but not go over the top. The structures should not become a resource farm (Dungeons are the exception). +
+
+If you have to use rare blocks, use them in moderation, don't allow it to become the focus of the structure. +
+
