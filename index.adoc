@@ -154,6 +154,7 @@ All sound files should be stored in the .ogg format. +
 ====
 .**Music**
 [%collapsible]
+====
 There are two types of music used in the mod.
 One is title screen music, the other is ambient, in-game music. +
 
