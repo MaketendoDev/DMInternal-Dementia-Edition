@@ -168,7 +168,7 @@ The vanilla tracks create a sense of importance to moments that would otherwise 
 ====
 When designing a TARDIS interior to use in an addon, you should respect the limitations put in place. All interiors in the mod fit within a 64x64 area, equivalent to 4x4 chunks. +
 
-image::TARDIS Building Area.png[alt="X Axis: Red | Z Axis: Blue"]
+image::TARDIS Building Area.png[alt="X Axis: Red | Z Axis: Blue", width=50%, height=50%]
 Red is the X Axis, while Blue denote the Z Axis. Each square is a chunk. +
 
 If designing a canon interior (one that has been in the show), you should aim to keep the styling consistent with the other canon interiors already in the mod. +
