@@ -6,6 +6,41 @@ body {
   font-family: Georgia,serif;
 }
 
+.light-black-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px; 
+  text-align: center;
+}
+
+
+.light-black-box::before {
+  content: "";
+  position: absolute;
+  top: -40px;  
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 100px;  
+  height: 100px; 
+  background-image: url('wiki_logo.png'); 
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 10px; 
+  z-index: 10; 
+}
+
+
+.light-black-box p {
+  font-size: 1.2em;
+  margin: 0;
+  padding-top: 60px; 
+}
+
 /* Title font. */
 h1, h2, h3, h4, h5, h6,
 div.title, caption.title,
