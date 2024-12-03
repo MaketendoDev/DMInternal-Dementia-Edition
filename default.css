@@ -27,7 +27,7 @@ body {
   transform: translateX(-50%); 
   width: 100px;  
   height: 100px; 
-  background-image: url('wiki_logo.png'); 
+  background-image: url('images/wiki_logo.png'); 
   background-size: cover; 
   background-position: center; 
   border-radius: 10px; 
