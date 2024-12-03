@@ -1,10 +1,6 @@
-/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-
 @import url(//fonts.googleapis.com/css?family=Noto+Sans);
-@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css);
 
-/* CUSTOMISATIONS */
-/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
 :root{
 --maincolor:#282c34;
 --primarycolor:#f39c12;
@@ -15,8 +11,6 @@
 --linkcoloralternate:#ff9800;
 --white:#FFFFFF;
 }
-
-/* Text styles */
 
 body{font-family: "Noto Sans",sans-serif;background-color: var(--maincolor);color:var(--white);}
 
@@ -29,16 +23,12 @@ blockquote{color:var(--tertiarycolor) !important}
 .quoteblock{color:var(--white)}
 code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
 
-
-/* Table styles */
 th{background-color: var(--maincolor);color:var(--white) !important;}
 td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
-
 
 #toc.toc2{background-color:var(--sidebarbackground);}
 #toctitle{color:var(--white);}
 
-/* Responsiveness fixes */
 video {
   max-width: 100%;
 }
@@ -68,9 +58,6 @@ a {
 .admonitionblock td.icon .icon-important::before {
   color: var(--linkcolor);
 }
-/*.admonitionblock td.icon .icon-caution::before {
-  color: var(--linkcoloralternate);
-}*/
 .admonitionblock td.icon .icon-warning::before {
   color: var(--primarycolor);
 }
@@ -105,4 +92,42 @@ a {
 }
 #header .details span.email a {
   color: var(--linkcoloralternate);
+}
+
+.light-black-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.light-black-box::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-image: url('path/to/your/logo.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.light-black-box p {
+  font-size: 1.2em;
+  margin: 0;
+  padding-top: 60px;
 }
