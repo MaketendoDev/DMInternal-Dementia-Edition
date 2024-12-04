@@ -1,4 +1,4 @@
-= image::images/wiki_logo.png[alt="Wiki Logo", width=70%, height=70%]
+image::images/wiki_logo.png[alt="Wiki Logo", width=70%, height=70%]
 Internal Stuff for Addon Creators and DM Dev Team regarding Dalek Mod Fabric 1.21.3
 Code Sections managed by Jayson; Style by Ginger
 :source-highlighter: coderay
